@@ -27,20 +27,10 @@ public class Question1 {
 		System.out.print("Please enter a number: ");
 		Scanner input =  new Scanner(System.in);
 		int x = input.nextInt();
- 
-		int k = 0;
-		int i = 1;
-		while(k < A.length-1)
-		{	
-			if(A[k] + A[i] == x)
-				System.out.println("Indices " + k + " & " + i + " with values " + A[k] + " & " + A[i]);
-			i++;	
-			if(i ==  A.length)
-			{
-				k++;
-				i = k + 1;
-			}	
-		}
+		for(int i = 0; i< A.length; i++)
+			for(int k = i+1; k<A.length; k++)
+				if(A[i] + A[k] ==  x)
+					System.out.println("Indices " + i + " & " + k + " with values " + A[i] + " & " + A[k]);
 	}
 
 }
